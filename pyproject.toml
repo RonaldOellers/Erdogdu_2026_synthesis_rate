@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CalcSynthesisRates"
+version = "1.0.0"
+description = "Single command to reproduce TT-seq synthesis rate calculations from ###TODO insert DOI."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Ronald Oellers", email = "oellers@ie-freiburg.mpg.de"}]
+dependencies = [
+  "snakemake==9.14.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["TTseq_synthesis_rates"]
+
+[project.scripts]
+CalcSynthesisRates = "CalcSynthesisRates:main"
+
+[tool.setuptools.package-data]
+TTseq_synthesis_rates = ["*"]

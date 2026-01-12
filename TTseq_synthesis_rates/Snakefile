@@ -1,0 +1,22 @@
+EXPERIMENTS = ["BRD2_AID", "BRD234_inhibition"]
+
+rule all:
+    input:
+        expand("results/{exp}/total.synthesis.rates.replicate.list.SpikeinMedian.RData",
+            exp=EXPERIMENTS
+        )
+
+rule compute_synthesis_rates:
+    input:
+        indir = "data/{exp}"
+    output:
+        out_rdata = "results/{exp}/total.synthesis.rates.replicate.list.SpikeinMedian.RData"
+    threads: 1
+    shell:
+        """
+        Rscript scripts/compute_synthesis_rates_spikeinMedian.R \
+          {input.indir} \
+          {output.out_rdata}
+        """
+onsuccess:
+    print("Synthesis rates computed and saved to results/")

@@ -1,0 +1,6 @@
+results/
+.snakemake/
+CalcSynthesisRates.egg-info/
+*.pyc
+.git
+*.log
