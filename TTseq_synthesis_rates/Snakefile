@@ -1,4 +1,4 @@
-EXPERIMENTS = ["BRD2_AID", "BRD234_inhibition"]
+EXPERIMENTS = ["BRD234_inhibition"]
 
 rule all:
     input:
