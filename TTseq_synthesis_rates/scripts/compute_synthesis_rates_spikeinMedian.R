@@ -88,8 +88,8 @@ total <- t(
 # Decay and synthesis rate calculation
 # ----------------------------
 
-# Doubling time: 24 h (can be changed here if needed)
-growthtime <- 24
+# Doubling time: 13.3 h for this celltpye (can be changed here if needed)
+growthtime <- 13.3
 alpha <- log(2) / (growthtime * 60)   # per minute
 
 # 5 minutes labeling time
