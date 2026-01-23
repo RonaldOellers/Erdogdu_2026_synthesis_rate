@@ -6,7 +6,6 @@ This repository reproduces synthesis rate calculations from TT-seq and RNA-seq d
 
 The required RData inputs for each experiment must be placed in:
 
-- `data/BRD2_AID/`
 - `data/BRD234_inhibition/`
 
 Each directory should contain:
@@ -37,7 +36,7 @@ cd Erdogdu_2026_synthesis_rate/TTseq_synthesis_rates
 snakemake -j 2
 ```
 > [!IMPORTANT]  
-> make sure the input RData files are in data/BRD2_AID and data/BRD234_inhibition before running
+> make sure the input RData files are in data/BRD234_inhibition before running
 
 &nbsp;
 ---
@@ -64,12 +63,11 @@ pip install -e .
 CalcSynthesisRates
 ```
 > [!IMPORTANT]  
-> make sure the input RData files are in data/BRD2_AID and data/BRD234_inhibition before running.
+> make sure the input RData files are in data/BRD234_inhibition before running.
 > Also the output files will be generated in the package dir so make sure to use `pip install -e .` so the results will be produced in the repo dir.
 
 &nbsp;
 # Where to find the results
 Both of these will create:
 
-- Erdogdu_2026_synthesis_rate/results/BRD2_AID/total.synthesis.rates.replicate.list.SpikeinMedian.RData
 - Erdogdu_2026_synthesis_rate/results/BRD234_inhibition/total.synthesis.rates.replicate.list.SpikeinMedian.RData
