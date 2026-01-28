@@ -25,7 +25,7 @@ conda create -n ttseq_synth -c conda-forge -c bioconda snakemake
 conda activate ttseq_synth
 ```
 
-2. Clone this repository and run the Snakefile:
+2. Clone this repository:
 ```bash
 git clone https://github.com/RonaldOellers/Erdogdu_2026_synthesis_rate.git
 cd Erdogdu_2026_synthesis_rate/TTseq_synthesis_rates
